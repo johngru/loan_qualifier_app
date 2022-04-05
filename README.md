@@ -37,7 +37,7 @@ This section should include screenshots, code blocks, or animations explaining h
 
 The seed code is from the course material from a UCBerkeley Extension program.  This updated version is written by John Gruenewald.<br><br>
 For more information, contact **John Gruenewald**:<br>
-**e-mail:** [john.h.gruenewald@gmail.com](john.h.gruenewald@gmail.com)<br> **linked-in:**  [jhgruenewald](https://www.linkedin.com/in/jhgruenewald/)<br>**twitter:**  [@GruenewaldJohn](https://twitter.com/GruenewaldJohn)<br>**medium:**  [@comput99](https://medium.com/@comput99)
+**e-mail:** [john.h.gruenewald@gmail.com](mailto:john.h.gruenewald@gmail.com)<br> **linked-in:**  [jhgruenewald](https://www.linkedin.com/in/jhgruenewald/)<br>**twitter:**  [@GruenewaldJohn](https://twitter.com/GruenewaldJohn)<br>**medium:**  [@comput99](https://medium.com/@comput99)
 
 ---
 
