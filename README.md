@@ -1,18 +1,29 @@
-# Project Title
+# Qualifying Loan Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+![Growth of money over time](https://cdn.pixabay.com/photo/2017/08/30/07/52/money-2696219_1280.jpg)
+
+This application compares a potential borrower's financial background against a database of lenders and their associated acceptance criteria for approval.  It returns a list of lenders that will accept the borrower's lending criteria.  Additionally, it prompts the user to save the qualifying loan list as a new CSV file, which is a new feature in this update.
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This project is written using ```Python 3.7.11```.  Key libraries include ```fire 0.4.0``` for the interactive CLI, ```questionary 1.10.0``` for user prompts, and standard python packages for file name management ```Path```, csv file management ```csv```, and program exit control ```sys```.    
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before running the application, first install the following packages if you don't already have them installed in your development environment.
+
+```python
+  pip install fire
+  pip install questionary
+```
+The run file of the application is ```app.py```.  To run, simply type the following in terminal:
+```python
+python app.py
+``` 
 
 ---
 
@@ -24,10 +35,14 @@ This section should include screenshots, code blocks, or animations explaining h
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+The seed code is from the course material from a UCBerkeley Extension program.  This updated version is written by John Gruenewald.<br><br>
+For more information, contact **John Gruenewald**:<br>
+**e-mail:** [john.h.gruenewald@gmail.com](john.h.gruenewald@gmail.com)<br> **linked-in:**  [jhgruenewald](https://www.linkedin.com/in/jhgruenewald/)<br>**twitter:**  [@GruenewaldJohn](https://twitter.com/GruenewaldJohn)<br>**medium:**  [@comput99](https://medium.com/@comput99)
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT License
+
+Copyright (c) 2022 John Gruenewald
