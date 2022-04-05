@@ -8,7 +8,7 @@ This application compares a potential borrower's financial background against a 
 
 ## Technologies
 
-This project is written using ```Python 3.7.11```.  Key libraries include ```fire 0.4.0``` for the interactive CLI, ```questionary 1.10.0``` for user prompts, and standard python packages for file name management ```Path```, csv file management ```csv```, and program exit control ```sys```.    
+This project is written using ```Python 3.7.11```.  Key libraries include ```fire 0.4.0``` for the interactive CLI, ```questionary 1.10.0``` for user prompts, and standard python packages for file name management ```pathlib```, csv file management ```csv```, and program exit control ```sys```.    
 
 ---
 

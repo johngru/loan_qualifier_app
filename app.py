@@ -6,6 +6,8 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
+import csv
+from pathlib import Path
 import sys
 import fire
 import questionary
@@ -109,7 +111,47 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    
+    #Acceptance criteria: If no loans exist, prompt user that no loans exist and exit.
+    if(len(qualifying_loans)==0):
+        print("No loans exist for the given borrower's financial criteria.  No file will be saved.")
+        sys.exit("***Exiting Application***")
+    
+    else:
+    #Acceptance criteria: Should prompt user to save results as a CSV file.
+        action = questionary.select("Save the qualifying loans to a CSV file?",
+        choices=["Save to CSV file",
+        "Exit without saving"
+        ],use_arrow_keys=True).ask()
+
+        if(action == "Save to CSV file"):  
+    #Acceptance criteria: Should prompt for file path to save CSV file.
+            csvpath = questionary.text("Enter the path and file name for saving. Include the *.csv extention:").ask()
+            csvpath = Path(csvpath)
+            #header values for output qualifying_loans.csv file.
+            header = [
+                'Lender',
+                'Max Loan Amount',
+                'Max LTV',
+                'Max DTI',
+                'Min Credit Score',
+                'Interest Rate'
+                ]
+    #Acceptance criteria: Should save as a CSV file.
+            with open(csvpath, "w") as f:
+                csvwriter = csv.writer(f)
+                csvwriter.writerow(header)
+                # Write the CSV data
+                for row in qualifying_loans:
+                    csvwriter.writerow(row)
+                print(f'Qualifying loan information successfully saved to {csvpath}')
+            sys.exit("***Exiting Application***")
+
+    #Acceptance criteria: Should have option to not save the file.
+
+        elif(action == "Exit without saving"):
+            print("No file saved.")
+            sys.exit("***Exiting Application***")
 
 
 def run():
