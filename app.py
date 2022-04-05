@@ -14,6 +14,7 @@ import questionary
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -138,13 +139,7 @@ def save_qualifying_loans(qualifying_loans):
                 'Interest Rate'
                 ]
     #Acceptance criteria: Should save as a CSV file.
-            with open(csvpath, "w") as f:
-                csvwriter = csv.writer(f)
-                csvwriter.writerow(header)
-                # Write the CSV data
-                for row in qualifying_loans:
-                    csvwriter.writerow(row)
-                print(f'Qualifying loan information successfully saved to {csvpath}')
+            save_csv(csvpath,qualifying_loans,header)
             sys.exit("***Exiting Application***")
 
     #Acceptance criteria: Should have option to not save the file.

@@ -28,3 +28,23 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+def save_csv(csvpath,data,header=[]):
+    """Writes a list of data to a CSV file with optional header arguement.
+    Args:
+        csvpath (Path): The path to write the csvfile.
+        data (list): The list of data to be written to a CSV file.
+        header (list, optional): Writes a header row if header arguement is provided 
+
+    Returns:
+        An output CSV file and print statement verifying successful saves.
+    """
+    with open(csvpath, "w") as f:
+        csvwriter = csv.writer(f)
+        #Writes optional header arguement to file first
+        if(header!=[]):
+            csvwriter.writerow(header)
+        # Write the CSV data
+        for row in data:
+            csvwriter.writerow(row)
+        print(f'Data successfully saved to {csvpath}')
