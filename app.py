@@ -2,6 +2,8 @@
 """Loan Qualifier Application.
 
 This is a command line application to match applicants with qualifying loans.
+It gathers a list of qualifying loans based on a borrower's criteria and gives
+an option to the user to save the list as a CSV file at a specified file location.
 
 Example:
     $ python app.py
@@ -120,12 +122,8 @@ def save_qualifying_loans(qualifying_loans):
     
     else:
     #Acceptance criteria: Should prompt user to save results as a CSV file.
-        action = questionary.select("Save the qualifying loans to a CSV file?",
-        choices=["Save to CSV file",
-        "Exit without saving"
-        ],use_arrow_keys=True).ask()
-
-        if(action == "Save to CSV file"):  
+        save = questionary.confirm("Save the qualifying loans to a CSV file?").ask()
+        if(save):  
     #Acceptance criteria: Should prompt for file path to save CSV file.
             csvpath = questionary.text("Enter the path and file name for saving. Include the *.csv extention:").ask()
             csvpath = Path(csvpath)
@@ -144,7 +142,7 @@ def save_qualifying_loans(qualifying_loans):
 
     #Acceptance criteria: Should have option to not save the file.
 
-        elif(action == "Exit without saving"):
+        else:
             print("No file saved.")
             sys.exit("***Exiting Application***")
 

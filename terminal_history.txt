@@ -1,0 +1,50 @@
+  344  python app.py
+  345  python app.py
+  346  python app.py
+  347  python app.py
+  348  python app.py
+  349  python app.py
+  350  python app.py
+  351  python app.py
+  352  python app.py
+  353  python app.py
+  354  python app.py
+  355  python app.py
+  356  python app.py
+  357  python app.py
+  358  python app.py
+  359  python app.py
+  360  python app.py
+  361  python app.py
+  362  python app.py
+  363  ls
+  364  git status
+  365  git stage .
+  366  git status
+  367  git commit -m "Added a save_qualifying_loans method to the app.py.  Also corrected an error in README.md."
+  368  git push origin main
+  369  ls
+  370  conda deactivate
+  371  ls
+  372  exit
+  373  conda activate dev
+  374  clear
+  375  python app.py
+  376  python app.py
+  377  code .
+  378  ls
+  379  python app.py
+  380  python app.py
+  381  git status
+  382  git stage -A
+  383  git commit -m "Added save_csv method to fileio.py and altered the app.py to incorporate new function."
+  384  git push
+  385  python app.py
+  386  python app.py
+  387  python app.py
+  388  python app.py
+  389  clear
+  390  python app.py
+  391  clear
+  392  python app.py
+  393  history 50 > terminal_history.txt

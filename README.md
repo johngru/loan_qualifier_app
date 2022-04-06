@@ -29,7 +29,25 @@ python app.py
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+This application takes known lender acceptance criteria from a group of lenders and compares a potential borrower's financial metrics against this group.  It then populates a list of lenders that would accept the borrower's loan request.  The resultant lender list can be then be saved to a CSV file at a specified file location.
+
+## To Start
+To run the application, open a terminal, ```cd``` into the top directory of the files containing ```app.py```, and then simply type:
+```python
+python app.py
+```
+## Program flow
+
+You will then be prompted to enter a file path to the group of lender rates.  The default, sample rate sheet is in the subfolder ```data``` and has file path ```./data/daily_rate_sheet.csv```.  After entering the path, press ```Enter```.
+
+Next you will be prompted to enter the potential borrower's financial criteria for loan acceptance.  You will be asked to enter items such as credit score, total monthly debt, total montly income, desired loan amount, and the borrower's home value.  After each prompt, press ```Enter```.
+After the question prompts, the application compares these criteria with the group of lenders and outputs a list of the subset of lenders that accept the conditions of the loan for the borrower.  
+
+## Saving your work
+
+You will be asked if you would like to save the qualifying loans to a CSV file.  To exit without saving, simply type ```n```, and the application will exit without saving.
+To save the qualifying lenders to a CSV file, type ```Y```, and you will be prompted to enter the path and file name for the output file.  Make sure to include the *.csv extension to the end of your filename.  
+After entering the path and filename, press ```Enter```.  The application will output a successful save notification and then exit.  Your output file will be located at the file location you specified at the prompt.
 
 ---
 
